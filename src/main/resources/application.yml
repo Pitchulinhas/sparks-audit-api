@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: sparks-audit-api
+    topics:
+      request:
+        create: create-request-topic
+        find-all: find-all-requests-topic
+        find-by-id: find-request-by-id-topic
+        update-by-id: update-request-by-id-topic
+        delete-by-id: delete-request-by-id-topic
+    reply-topics:
+      request:
+        create: create-request-reply-topic
+        find-all: find-all-requests-reply-topic
+        find-by-id: find-request-by-id-reply-topic
+        update-by-id: update-request-by-id-reply-topic
+        delete-by-id: delete-request-by-id-reply-topic
