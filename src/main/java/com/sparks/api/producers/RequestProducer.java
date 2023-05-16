@@ -3,6 +3,7 @@ package com.sparks.api.producers;
 import com.google.gson.Gson;
 import com.sparks.api.entities.Request;
 import com.sparks.api.responses.ServiceResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 import org.springframework.messaging.Message;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +31,7 @@ public class RequestProducer {
     @Value("${spring.kafka.reply-topics.request.find-by-id}")
     private String findRequestByIdReplyTopic;
 
+    @Autowired
     private ReplyingKafkaTemplate<String, String, String> kafkaTemplate;
 
     private Gson gson;

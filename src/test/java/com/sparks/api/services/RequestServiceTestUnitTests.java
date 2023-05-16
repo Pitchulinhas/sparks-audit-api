@@ -25,7 +25,7 @@ public class RequestServiceTestUnitTests implements IRequestServiceTests {
     private RequestProducer requestProducer;
 
     @BeforeEach
-    public void Setup() throws Exception {
+    public void setup() throws Exception {
         Request previouslyCreatedRequest = new Request();
 
         previouslyCreatedRequest.setId("64441357327a68740d94ac26");
